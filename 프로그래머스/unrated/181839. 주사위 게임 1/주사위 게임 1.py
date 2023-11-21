@@ -1,13 +1,6 @@
 def solution(a, b):
-    answer = 0
-    if a%2 == 0:
-        if b%2 == 0:
-            answer = abs(a - b)
-        else:
-            answer = 2*(a+b)
-    else:
-        if b%2 == 0:
-            answer = 2*(a+b)
-        else:
-            answer = a*a+b*b
-    return answer
+    if a%2==0 and b%2 == 0:
+        return abs(a - b)
+    elif a%2!=0 and b%2 != 0:
+        return a*a+b*b
+    return 2*(a+b)
